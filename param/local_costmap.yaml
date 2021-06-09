@@ -1,0 +1,33 @@
+local_costmap:
+  global_frame: magni_1/odom
+  robot_base_frame: magni_1/base_link
+  update_frequency: 10.0
+  publish_frequency: 10.0
+  static_map: false
+  rolling_window: true
+  width: 10.0
+  height: 10.0
+  resolution: 0.1
+  transform_tolerance: 0.3
+
+  plugins:
+    - {name: rgbd_obstacle_layer, type: "spatio_temporal_voxel_layer/SpatioTemporalVoxelLayer"}
+    - {name: 2d_obstacles, type: "spatio_temporal_voxel_layer/SpatioTemporalVoxelLayer"}
+    - {name: inflation_layer, type: "costmap_2d::InflationLayer"}
+
+alex_local_costmap:
+  global_frame: magni_1/odom
+  robot_base_frame: magni_1/base_link
+  update_frequency: 10.0
+  publish_frequency: 10.0
+  static_map: false
+  rolling_window: true
+  width: 10.0
+  height: 10.0
+  resolution: 0.1
+  transform_tolerance: 0.3
+
+  plugins:
+    - {name: rgbd_obstacle_layer, type: "spatio_temporal_voxel_layer/SpatioTemporalVoxelLayer"}
+    - {name: 2d_obstacles, type: "spatio_temporal_voxel_layer/SpatioTemporalVoxelLayer"}
+    - {name: inflation_layer, type: "costmap_2d::InflationLayer"}

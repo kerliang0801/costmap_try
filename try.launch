@@ -1,0 +1,11 @@
+<launch>
+<param name="/use_sim_time" value="false"/>
+	<node pkg="costmap_try" type="costmap_try" respawn="true" name="costmap_try" output="screen" >
+
+		<!-- config files-->
+		<rosparam file="$(find costmap_try)/param/costmap_common.yaml" command="load" ns="local_costmap" />
+		<rosparam file="$(find costmap_try)/param/local_costmap.yaml" command="load" />
+
+	</node>
+
+</launch>
